@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>CV Professionnel | JAWAD RAMDANI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --royal-green: #004d40;
+            --deep-gold: #FFD700;
+            --soft-white: #f4f4f4;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--royal-green) 0%, #002d20 100%);
+            background-attachment: fixed;
+            color: #333;
+            font-family: 'Poppins', sans-serif;
+            margin: 0; padding: 0;
+            display: flex; flex-direction: column; align-items: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #003d33;
+            border-bottom: 5px solid var(--deep-gold);
+            width: 100%;
+            padding: 50px 0;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 10;
+        }
+
+        .profile-img {
+            width: 170px; height: 170px;
+            border-radius: 50%;
+            border: 5px solid var(--deep-gold); 
+            outline: 3px solid rgba(255, 215, 0, 0.3);
+            outline-offset: 5px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        header h1 { color: var(--deep-gold); margin: 10px 0; font-size: 2.8em; letter-spacing: 2px; }
+        header p { color: #ccc; font-size: 1.1em; }
+
+        .container {
+            max-width: 1000px; width: 90%; margin: 40px 0;
+            background-color: white;
+            padding: 50px; border-radius: 20px;
+            border-left: 10px solid var(--deep-gold);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            z-index: 10;
+        }
+
+        h2 { 
+            color: var(--royal-green); 
+            border-bottom: 3px solid var(--deep-gold); 
+            display: inline-block;
+            margin-top: 30px; margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .section-content { margin-bottom: 30px; }
+        .exp-item { margin-bottom: 20px; }
+        .exp-title { font-weight: bold; color: #00796b; font-size: 1.2em; }
+        .exp-date { font-style: italic; color: #666; font-size: 0.9em; }
+
+        /* لغات البروفايل */
+        .language-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .lang-box {
+            background-color: var(--royal-green);
+            color: var(--deep-gold);
+            padding: 10px 18px;
+            border-radius: 10px;
+            font-weight: 600;
+            border: 2px solid var(--deep-gold);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            font-size: 0.95em;
+            transition: transform 0.3s ease;
+        }
+
+        .lang-box:hover { transform: translateY(-5px); }
+
+        /* FAB Buttons */
+        .fab-container { position: fixed; bottom: 30px; right: 30px; z-index: 2000; }
+        .fab-main {
+            width: 65px; height: 65px; background-color: var(--deep-gold);
+            border-radius: 50%; display: flex; justify-content: center; align-items: center;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4); cursor: pointer; font-size: 28px;
+        }
+        .fab-list { display: none; flex-direction: column-reverse; align-items: center; margin-bottom: 15px; }
+        .fab-item {
+            width: 55px; height: 55px; background-color: var(--royal-green); color: white;
+            border-radius: 50%; margin: 10px 0; display: flex; justify-content: center;
+            align-items: center; cursor: pointer; font-size: 22px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 2px solid var(--deep-gold);
+        }
+
+        /* Modal */
+        .modal { display: none; position: fixed; z-index: 3000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); }
+        .modal-content {
+            background-color: white; margin: 10% auto; padding: 40px;
+            border-radius: 20px; width: 85%; max-width: 600px;
+            border-top: 10px solid var(--deep-gold); text-align: left;
+            position: relative; line-height: 1.8;
+        }
+        .close-btn { 
+            background-color: var(--royal-green); color: white; border: none; 
+            padding: 10px 25px; border-radius: 5px; cursor: pointer; float: right;
+        }
+
+        /* Snow Effect */
+        #snow-container {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; z-index: 9999;
+        }
+        .snowflake {
+            position: fixed; top: -10px; background-color: white;
+            border-radius: 50%; opacity: 0.8; pointer-events: none;
+            animation: fall linear infinite;
+        }
+        @keyframes fall { to { transform: translateY(105vh); } }
+    </style>
+</head>
+<body>
+
+    <!-- حاوية الثلج يجب أن تكون هنا في بداية الـ body -->
+    <div id="snow-container"></div>
+
+    <header>
+        <img src="j22.jpg" alt="Jawad Ramdani" class="profile-img">
+        <h1>JAWAD RAMDANI</h1>
+        <p>Enseignant Stagiaire | Développeur Web Junior</p>
+        <p>📧 ramdanijad9@gmail.com | 📞 +212 652 669 636 | 📍 Casablanca, Maroc</p>
+    </header>
+
+    <div class="container">
+        <section class="section-content">
+            <h2>Profil Professionnel</h2>
+            <p>
+                Étudiant à l'ENS de Casablanca, je suis un futur enseignant passionné par l'innovation pédagogique et le développement web. 
+                Mon parcours combine une expertise en sciences de l'éducation avec des compétences techniques en structuration de documents numériques et programmation.
+            </p>
+        </section>
+
+        <section class="section-content">
+            <h2>Expériences Professionnelles</h2>
+            <div class="exp-item">
+                <div class="exp-title">Stage de Formation Pédagogique - École Oqba Ibn Nafi</div>
+                <div class="exp-date">Direction Provinciale de Nouaceur | 2023 - 2026</div>
+                <ul>
+                    <li>Cycle complet de formation pratique (3 ans) allant de l'observation à la pratique autonome.</li>
+                    <li>Immersion dans le système de <strong>"Formation Mobile"</strong>, assurant une polyvalence entre différents niveaux scolaires.</li>
+                    <li>Conception et animation de séances pédagogiques basées sur l'approche par compétences (APC).</li>
+                    <li>Gestion de classe et coordination avec l'administration pédagogique.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section-content">
+            <h2>Formation Académique</h2>
+            <div class="exp-item">
+                <div class="exp-title">Licence en Éducation (Enseignement Primaire)</div>
+                <div class="exp-date">École Normale Supérieure (ENS) Casablanca</div>
+                <p>Spécialisation en psychologie différentielle et méthodes d'enseignement innovantes.</p>
+            </div>
+        </section>
+
+        <section class="section-content">
+            <h2>Compétences Clefs</h2>
+            <ul>
+                <li><strong>Pédagogie :</strong> Approche par compétences, Psychologie différentielle, Gestion de groupe.</li>
+                <li><strong>Informatique :</strong> Développement Web, Suite Office, Design de documents académiques.</li>
+            </ul>
+            
+            <h3>Compétences Linguistiques</h3>
+            <div class="language-container">
+                <div class="lang-box">Arabe : Langue maternelle</div>
+                <div class="lang-box">Français : Professionnel</div>
+                <div class="lang-box">Anglais : Niveau B2</div>
+                <div class="lang-box">Turc : Niveau A2</div>
+            </div>
+        </section>
+    </div>
+
+    <!-- FAB Menu -->
+    <div class="fab-container">
+        <div class="fab-list" id="fabList">
+            <div class="fab-item" onclick="showModal('Vision Future', 'Mon ambition est de devenir un pionnier de l’enseignement numérique au Maroc, en tant qu’enseignant-programmeur.')">🎯</div>
+            <div class="fab-item" onclick="showModal('Objectifs', 'Intégrer les outils numériques au cœur de l’école marocaine pour favoriser un apprentissage inclusif.')">🚀</div>
+            <div class="fab-item" onclick="showModal('Projets', 'Développement de ce portfolio numérique et rédaction d’un rapport de stage exhaustif.')">📂</div>
+        </div>
+        <div class="fab-main" onclick="toggleFab()">➕</div>
+    </div>
+
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalTitle"></h3>
+            <p id="modalText"></p>
+            <button class="close-btn" onclick="closeModal()">Fermer</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleFab() {
+            const list = document.getElementById("fabList");
+            list.style.display = (list.style.display === "flex") ? "none" : "flex";
+        }
+        function showModal(title, text) {
+            document.getElementById("modalTitle").innerText = title;
+            document.getElementById("modalText").innerText = text;
+            document.getElementById("infoModal").style.display = "block";
+        }
+        function closeModal() {
+            document.getElementById("infoModal").style.display = "none";
+        }
+        window.onclick = function(event) {
+            const modal = document.getElementById("infoModal");
+            if (event.target == modal) closeModal();
+        }
+
+        function createSnowflake() {
+            const snowContainer = document.getElementById('snow-container');
+            if(!snowContainer) return;
+            const snowflake = document.createElement('div');
+            const size = Math.random() * 5 + 2 + 'px';
+            const left = Math.random() * 100 + 'vw';
+            const duration = Math.random() * 3 + 4 + 's';
+            const opacity = Math.random();
+
+            snowflake.classList.add('snowflake');
+            snowflake.style.width = size;
+            snowflake.style.height = size;
+            snowflake.style.left = left;
+            snowflake.style.animationDuration = duration;
+            snowflake.style.opacity = opacity;
+
+            snowContainer.appendChild(snowflake);
+            setTimeout(() => { snowflake.remove(); }, 6000);
+        }
+        setInterval(createSnowflake, 150);
+    </script>
+</body>
+</html>
